@@ -1,20 +1,31 @@
 
-
+// Math functions
 function add(a, b)      { return a + b };
 function sub(a, b) { return a - b };
 function mul(a, b) { return a * b };
 function div(a, b)   { if (b === 0) { alert("Next try to square a circle."); } return b == 0 ? 0 : a / b };
 
+let num1 = 0;
+let num2 = 0;
+let op = "add";
 
-console.log(add(1,2));
-console.log(add(6,-1));
+function operate(op, n1, n2) {
+    switch (op) {
+        case "sub":
+            return sub(n1, n2);
+        case "mul":
+            return mul(n1, n2);
+        case "div":
+            return div(n1, n2);
+        case "add":
+        default:
+            return add(n1, n2);
+    }
+}
 
-console.log(sub(1,2));
-console.log(sub(5,2));
-
-console.log(mul(7,2));
-console.log(mul(7,-2));
-
-console.log(div(12,2));
-console.log(div(11,2));
-console.log(div(11,0));
+console.log(operate("add", 1, 2));
+console.log(operate("add", 5, -2));
+console.log(operate("sub", 5, 2));
+console.log(operate("mul", 5, 2));
+console.log(operate("div", 5, 2));
+console.log(operate("asdfasdf", 5, 2));
