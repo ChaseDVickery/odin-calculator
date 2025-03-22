@@ -166,12 +166,30 @@ function initializeCalculator() {
     resButton.addEventListener("click", (e) => { setNextCalculationInput("="); });
 
     clsButton.addEventListener("click", (e) => { clearAll(); buildDisplay(); });
-    
 }
 
+function initializeKeyboardControls() {
+    document.addEventListener("keydown", (e) => {
+        if (
+            isDigit(e.key) ||
+            isDot(e.key) ||
+            isOp(e.key) ||
+            e.key === "="
+        ) { setNextCalculationInput(e.key); }
+        else if (e.key === "Enter") { setNextCalculationInput("="); }
+    });
+}
+
+function formatNumberDisplay(num) {
+    if (!isValidNumber(num)) { return ""; }
+    else { num = Number(num); }
+    if (!num) { return ""; }
+    return Number.isInteger(num) ? num : num.toFixed(2);
+}
 function buildDisplay() {
-    let resultString = result === '' ? '' : '= '+(Number.isInteger(result) ? result : result.toFixed(2));
+    let resultString = result === '' ? '' : '= '+(formatNumberDisplay(result));
     display.textContent = `${num1} ${op} ${num2} ${resultString}`;
 }
 
 initializeCalculator();
+initializeKeyboardControls();
