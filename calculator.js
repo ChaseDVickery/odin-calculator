@@ -177,6 +177,7 @@ function initializeKeyboardControls() {
             e.key === "="
         ) { setNextCalculationInput(e.key); }
         else if (e.key === "Enter") { setNextCalculationInput("="); }
+        else if (e.key === "Escape") { clearAll(); buildDisplay(); }
     });
 }
 

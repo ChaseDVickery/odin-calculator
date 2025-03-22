@@ -4,14 +4,23 @@
     font-family: monospace, sans-serif
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0;
+    height: 100%; */
+}
+
 #calculator {
     display: flex;
     width: 300px;
     height: 500px;
     /* min-width: 300px;
-    min-height: 500px; */
-    /* max-width: 600px;
+    min-height: 500px;
+    max-width: 600px;
     max-height: 1000px; */
+
     flex-direction: column;
 
     border: solid black 1px;
