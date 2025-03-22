@@ -23,9 +23,3 @@ function operate(op, n1, n2) {
     }
 }
 
-console.log(operate("add", 1, 2));
-console.log(operate("add", 5, -2));
-console.log(operate("sub", 5, 2));
-console.log(operate("mul", 5, 2));
-console.log(operate("div", 5, 2));
-console.log(operate("asdfasdf", 5, 2));
