@@ -6,44 +6,47 @@
     <title>Document</title>
 
     <script src="calculator.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="calculator">
-        <div id="calc-display">1 + 1</div>
+        <div id="calc-display"><div>1 + 1</div></div>
 
-        <div id="op-panel">
-            <button class="calc-btn op" id="add">+</button>
-            <button class="calc-btn op" id="sub">-</button>
-            <button class="calc-btn op" id="mul">*</button>
-            <button class="calc-btn op" id="div">/</button>
-            <button class="calc-btn resolve" id="resolve">=</button>
+        <div id="buttons">
+            <div id="rows">
+                <div class="num-row">
+                    <button class="calc-btn cls" id="cls">CLS</button>
+                </div>
+                <div class="num-row">
+                    <button class="calc-btn num" id="1">1</button>
+                    <button class="calc-btn num" id="2">2</button>
+                    <button class="calc-btn num" id="3">3</button>
+                </div>
+                <div class="num-row">
+                    <button class="calc-btn num" id="4">4</button>
+                    <button class="calc-btn num" id="5">5</button>
+                    <button class="calc-btn num" id="6">6</button>
+                </div>
+                <div class="num-row">
+                    <button class="calc-btn num" id="7">7</button>
+                    <button class="calc-btn num" id="8">8</button>
+                    <button class="calc-btn num" id="9">9</button>
+                </div>
+                <div class="num-row">
+                    <button class="calc-btn num" id="0">0</button>
+                    <button class="calc-btn dot" id="dot">.</button>
+                </div>
+            </div>
+
+            <div id="op-panel">
+                <button class="calc-btn op" id="add">+</button>
+                <button class="calc-btn op" id="sub">-</button>
+                <button class="calc-btn op" id="mul">x</button>
+                <button class="calc-btn op" id="div">&#247</button>
+                <button class="calc-btn resolve" id="resolve">=</button>
+            </div>
         </div>
 
-        <div id="rows">
-            <div id="num-row">
-                <button class="calc-btn cls" id="cls">CLS</button>
-            </div>
-            <div id="num-row">
-                <button class="calc-btn num" id="1">1</button>
-                <button class="calc-btn num" id="2">2</button>
-                <button class="calc-btn num" id="3">3</button>
-            </div>
-            <div id="num-row">
-                <button class="calc-btn num" id="4">4</button>
-                <button class="calc-btn num" id="5">5</button>
-                <button class="calc-btn num" id="6">6</button>
-            </div>
-            <div id="num-row">
-                <button class="calc-btn num" id="7">7</button>
-                <button class="calc-btn num" id="8">8</button>
-                <button class="calc-btn num" id="9">9</button>
-            </div>
-            <div id="num-row">
-                <button class="calc-btn num" id="0">0</button>
-                <button class="calc-btn dot" id="dot">.</button>
-            </div>
-        </div>
-        
     </div>
 </body>
 </html>
